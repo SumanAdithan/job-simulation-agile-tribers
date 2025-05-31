@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+@theme {
+    /* colors */
+    --color-background: #ffffff;
+    --color-font-primary: #263238;
+    --color-font-secondary: #4d4d4d;
+    --color-primary: #4caf4f;
+    --color-white: #ffffff;
+    --color-border: #676767;
+    --color-card: #263238;
+
+    /* font */
+    --font-primary: sans-serif;
+
+    /* breaking points */
+    /* --breakpoint-xxs: 22rem; */
+
+    /* box shadow */
+    /* --shadow-section: 0 1px 5px 2px rgba(0, 0, 0, 0.25); */
+}
+
+html {
+    scroll-behavior: smooth;
+}
