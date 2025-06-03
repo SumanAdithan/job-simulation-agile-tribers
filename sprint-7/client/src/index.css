@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    /* colors */
+    /* --color-background: #eff1f7; */
+
+    /* font */
+    --font-primary: 'Archivo', sans-serif;
+
+    /* breaking points */
+    /* --breakpoint-xxs: 22rem; */
+
+    /* box shadow */
+    /* --shadow-section: 0 1px 5px 2px rgba(0, 0, 0, 0.25); */
+}

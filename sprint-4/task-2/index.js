@@ -39,41 +39,33 @@ const renderTasks = () => {
     });
 
     tasks.innerHTML = html;
+};
 
-    const editBtns = document.querySelectorAll('.edit');
-    editBtns.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-            const id = parseInt(e.currentTarget.getAttribute('data-index'));
+tasks.onclick = (e) => {
+    const editBtn = e.target.closest('.edit');
+    const deleteBtn = e.target.closest('.delete');
 
-            const task = taskList.find((val) => val.id === id);
-            if (!task) return;
+    if (editBtn) {
+        const id = parseInt(editBtn.getAttribute('data-index'));
+        const task = taskList.find((val) => val.id === id);
+        if (!task) return;
 
-            const newValue = prompt('Edit your Task:', task.name);
-            if (newValue === null) return;
+        const newValue = prompt('Edit Student Name:', task.name);
+        if (newValue === null) return;
 
-            const trimmed = newValue.trim();
-            if (trimmed === '') return alert('Task cannot be empty');
+        const trimmed = newValue.trim();
+        if (trimmed === '') return alert('Name cannot be empty');
 
-            const isDuplicate = taskList.some((val) => val.name === trimmed && val.id !== id);
+        const isDuplicate = taskList.some((val) => val.name === trimmed && val.id !== id);
+        if (isDuplicate) return alert('Task must be unique');
 
-            if (isDuplicate) {
-                alert('Task must be unique');
-                return;
-            }
+        task.name = trimmed;
+        renderTasks();
+    }
 
-            task.name = trimmed;
-            renderTasks();
-        });
-    });
-
-    const deleteBtns = document.querySelectorAll('.delete');
-    deleteBtns.forEach((btn) => {
-        btn.addEventListener('click', (e) => {
-            const index = parseInt(e.currentTarget.getAttribute('data-index'));
-            const filteredTask = taskList.filter((val) => val.id !== index);
-
-            taskList = filteredTask;
-            renderTasks();
-        });
-    });
+    if (deleteBtn) {
+        const id = parseInt(deleteBtn.getAttribute('data-index'));
+        taskList = taskList.filter((val) => val.id !== id);
+        renderTasks();
+    }
 };

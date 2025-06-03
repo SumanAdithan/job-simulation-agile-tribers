@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Student List</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="app">
+            <div class="container">
+                <div class="header">
+                    <h1 class="header-title">Student List</h1>
+                    <div class="reload" id="reload">
+                        <img src="./img/reload.png" alt="reload" />
+                    </div>
+                </div>
+                <div class="main">
+                    <div class="input-field">
+                        <input type="text" placeholder="Enter Student Name" class="input" id="input" />
+                        <button class="add-btn" id="submit">Add Student</button>
+                    </div>
+                    <div class="flex">
+                        <input type="text" class="search" placeholder="Search Student" id="filter" />
+                    </div>
+                </div>
+
+                <div class="list-container">
+                    <ul id="students"></ul>
+                </div>
+                <div class="total-students" id="total"></div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
+<!--  
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Student List</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    </head>
+    <body>
+        <div class="w-full h-screen flex flex-col items-center justify-center text-[#5A5A5A]">
+            <div class="p-8 bg-[#030B15] rounded-xl">
+                <div class="flex justify-center items-center gap-4 mb-8">
+                    <h1 class="text-[#00C4F4] text-3xl font-bold text-center">Student List</h1>
+                    <div class="w-6 h-6 cursor-pointer hover:scale-125 transition duration-300" id="reload">
+                        <img src="./img/reload.png" alt="" />
+                    </div>
+                </div>
+                <div class="flex gap-8">
+                    <div class="flex">
+                        <input
+                            type="text"
+                            placeholder="Enter Student Name"
+                            class="p-2 text-xl rounded-l-xl placeholder:text-[#514E4E] w-[310px] outline-none bg-white"
+                            id="input"
+                        />
+                        <button class="bg-[#00C4F4] p-2 text-white font-bold rounded-r-xl" id="submit">
+                            Add Student
+                        </button>
+                    </div>
+                    <div class="flex">
+                        <input
+                            type="text"
+                            class="p-2 text-xl rounded-xl placeholder:text-[#5A5A5A] w-[300px] outline-none bg-white"
+                            placeholder="Search Student"
+                            id="filter"
+                        />
+                    </div>
+                </div>
+
+                <div class="w-[700px] h-96 mt-8 px-8 py-2 overflow-auto">
+                    <ul id="students"></ul>
+                </div>
+                <div class="text-right text-[#00C4F4] text-lg" id="total"></div>
+            </div>
+        </div>
+        <script src="./script.js"></script>
+    </body>
+</html>
+-->
