@@ -58,6 +58,8 @@ const renderStudents = (filter = '') => {
     });
 
     students.innerHTML = html;
+
+    totalStudents.innerText = `Total Students: ${studentList.length}`;
 };
 
 let draggedId = null;
