@@ -15,7 +15,7 @@ reloadBtn.addEventListener('click', () => {
 submitBtn.addEventListener('click', () => {
     if (input.value.trim() !== '') {
         if (!studentList.includes(input.value)) {
-            studentList.push({ id: studentList.length, name: input.value });
+            studentList.push({ id: input.value, name: input.value });
             input.value = '';
         }
     } else {
@@ -65,7 +65,7 @@ let draggedId = null;
 students.addEventListener('dragstart', (e) => {
     const li = e.target.closest('li');
     if (!li) return;
-    draggedId = parseInt(li.dataset.id);
+    draggedId = li.dataset.id;
 });
 
 students.addEventListener('dragover', (e) => {
@@ -76,7 +76,7 @@ students.addEventListener('drop', (e) => {
     e.preventDefault();
     const li = e.target.closest('li');
     if (!li) return;
-    const targetId = parseInt(li.dataset.id);
+    const targetId = li.dataset.id;
 
     if (draggedId === null || targetId === null || draggedId === targetId) return;
 
@@ -94,7 +94,7 @@ students.onclick = (e) => {
     const deleteBtn = e.target.closest('.delete');
 
     if (editBtn) {
-        const id = parseInt(editBtn.getAttribute('data-index'));
+        const id = editBtn.getAttribute('data-index');
         const student = studentList.find((val) => val.id === id);
         if (!student) return;
 
@@ -112,7 +112,7 @@ students.onclick = (e) => {
     }
 
     if (deleteBtn) {
-        const id = parseInt(deleteBtn.getAttribute('data-index'));
+        const id = deleteBtn.getAttribute('data-index');
         studentList = studentList.filter((val) => val.id !== id);
         renderStudents();
     }

@@ -7,7 +7,7 @@ let taskList = [];
 submitBtn.addEventListener('click', () => {
     if (input.value.trim() !== '') {
         if (!taskList.includes(input.value)) {
-            taskList.push({ id: taskList.length, name: input.value });
+            taskList.push({ id: input.value, name: input.value });
             input.value = '';
         }
     } else {
@@ -46,7 +46,7 @@ tasks.onclick = (e) => {
     const deleteBtn = e.target.closest('.delete');
 
     if (editBtn) {
-        const id = parseInt(editBtn.getAttribute('data-index'));
+        const id = editBtn.getAttribute('data-index');
         const task = taskList.find((val) => val.id === id);
         if (!task) return;
 
@@ -64,7 +64,7 @@ tasks.onclick = (e) => {
     }
 
     if (deleteBtn) {
-        const id = parseInt(deleteBtn.getAttribute('data-index'));
+        const id = deleteBtn.getAttribute('data-index');
         taskList = taskList.filter((val) => val.id !== id);
         renderTasks();
     }
