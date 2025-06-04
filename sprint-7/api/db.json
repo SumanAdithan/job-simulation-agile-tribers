@@ -148,32 +148,10 @@
         "name": "IPHONE",
         "sub_name": "15 Pro Max"
       },
-      "total_price": 100000,
+      "total_price": 200000,
       "net_price": 100000,
-      "quantity": 1,
+      "quantity": 2,
       "product_image": "/product_images/iphone.png"
-    },
-    {
-      "id": "vr-2",
-      "name": {
-        "name": "APPLE",
-        "sub_name": "Vision Pro"
-      },
-      "total_price": 250000,
-      "net_price": 250000,
-      "quantity": 1,
-      "product_image": "/product_images/vissionpro.png"
-    },
-    {
-      "id": "watch-3",
-      "name": {
-        "name": "WATCH",
-        "sub_name": "Series 9"
-      },
-      "total_price": 50000,
-      "net_price": 50000,
-      "quantity": 1,
-      "product_image": "/product_images/iwatch.png"
     }
   ]
 }
