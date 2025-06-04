@@ -5,10 +5,8 @@ import { useNavigate } from 'react-router-dom';
 export const Product = ({ product }: { product: ProductType }) => {
     const navigate = useNavigate();
     const addToCart = useProductStore((state) => state.addToCart);
-    const cart = useProductStore((state) => state.cart);
 
     const cartProduct = {
-        id: `${product.id}-${cart.length + 1}`,
         name: {
             name: product.name.name,
             sub_name: product.name.sub_name,

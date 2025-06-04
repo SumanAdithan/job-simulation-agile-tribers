@@ -141,17 +141,5 @@
       ]
     }
   ],
-  "cart": [
-    {
-      "id": "phone-1",
-      "name": {
-        "name": "IPHONE",
-        "sub_name": "15 Pro Max"
-      },
-      "total_price": 200000,
-      "net_price": 100000,
-      "quantity": 2,
-      "product_image": "/product_images/iphone.png"
-    }
-  ]
+  "cart": []
 }
